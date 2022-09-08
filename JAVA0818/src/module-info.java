@@ -1,0 +1,2 @@
+module JAVA0818 {
+}
