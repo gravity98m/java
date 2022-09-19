@@ -61,7 +61,7 @@ class OverloadingMethod {
 		System.out.println("add(double, double) 호출됨!");
 		System.out.println(num1 + num2);
 	}
-	
+	// 3. 정수 3개를 전달받아 덧셈 수행
 	public void add(int num1, int num2, int num3) {
 		System.out.println("add(int, int, int) 호출됨!");
 		System.out.println(num1 + num2 + num3);
@@ -73,9 +73,9 @@ class OverloadingMethod {
 //		System.out.println(a + b);
 //	}
 	
-	 // 주의! 리턴타입만 다를 경우 오버로딩 성립되지 않음! => 오류발생
+	// 주의! 리턴타입만 다를 경우 오버로딩 성립되지 않음! => 오류발생
 //	public int add(int num1, int num2) {
-//		System.out.println("add(int, int) 호출됨");
+//		System.out.println("add(int, int) 호출됨!");
 //		return num1 + num2 ;
 //	}
 	
