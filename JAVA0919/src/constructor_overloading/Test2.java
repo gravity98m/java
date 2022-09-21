@@ -1,4 +1,4 @@
-package constructor__overloading;
+package constructor_overloading;
 
 public class Test2 {
 
