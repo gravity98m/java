@@ -13,10 +13,12 @@ public class Ex {
 		Person p = new Person("한국", "홍길동", "031010-1234567" );
 		p.showPersonInfo();
 		
+		System.out.println("----------------------------------------");
 		
 		Person p2 = new Person("홍길동", "031010-1234567");
 		p2.showPersonInfo();
 		
+		System.out.println("----------------------------------------");
 		// 파라미터 생성자를 하나라도 정의할 경우
 		// 컴파일러에 의해 기본 생성자가 자동으로 생성되지 않는다!
 		// 따라서, 기본 생성자를 호출해야 하는 경우 직접 기본 생성자를 정의
@@ -46,6 +48,7 @@ class Person{
 	
 	// 파라미터 3개(nation, name, jumin)를 전달받아 초기화하는 생성자 정의
 	public Person(String newNation, String newName, String newJumin) {
+		System.out.println("Person(String, String, String) 생성자 호출됨!");
 		nation=newNation;
 		name=newName;
 		jumin=newJumin;
@@ -56,5 +59,7 @@ class Person{
 	//국가명, 이름, 주민번호를 출력하는 showPersonInfo()호출
 	public void showPersonInfo() {
 		System.out.println(nation);
+		System.out.println(name);
+		System.out.println(jumin);
 	}
 }
