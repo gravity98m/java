@@ -7,9 +7,13 @@ public class Test {
 		Account acc = new Account();
 //		System.out.println(acc.accountNo); // 클래스 외부에서는 '변수명.멤버변수' 형태로 호출해야 함 
 		
-		acc.accountNo = "111-1111-111";
-		acc.ownerName = "홍길동";
-		acc.balance = 0;
+		System.out.println("계좌번호 : " + acc.accountNo);
+		System.out.println("예금주명 : " + acc.ownerName);
+		System.out.println("현재잔고 : " + acc.balance + "원");
+		
+		acc.accountNo = "333-3333-333";
+		acc.ownerName = "이순신";
+		acc.balance = 10000;
 		
 		System.out.println("계좌번호 : " + acc.accountNo);
 		System.out.println("예금주명 : " + acc.ownerName);
