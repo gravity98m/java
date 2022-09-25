@@ -87,6 +87,7 @@ public class Ex {
 		// 최소 하나의 클래스는 패키지명까지 명시해야 한다!
 		// => 단, 실제 작성 시 명확한 구분을 위해 둘 다 패키지명으로 
 		//    명시하는 것이 좋음!
+		ExPack ex4;
 		pack_three.ExPack ex3;
 		
 
