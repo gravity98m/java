@@ -37,8 +37,7 @@ public class Ex {
 
 //		System.out.println("NormalMember.a : " + NormalMember.a );
 		// => Cannot make a static reference to the non-static field NormalMember.a
-		// => Static이 정의되어 있지 않은 인스턴스 멤버변수 a에 접근하려고 하면
-		//    에러가 발생한다.
+		// => Static이 정의되어 있지 않은 인스턴스 멤버변수 a에 접근하려고 하면 에러가 발생한다.
 		
 		NormalMember n1 = new NormalMember();
 		NormalMember n2 = new NormalMember();
@@ -84,9 +83,9 @@ public class Ex {
 		// 변경된 값이 두 인스턴스 모두 적용(공유)됨
 		// => 즉, 하나의 인스턴스에서 값을 변경하면 모든 인스턴스가 영향을 받음
 
-		System.out.println("---------------------------------------");
-		s2.a = 1000;
-		System.out.printf("s1.a : %d, s2.a : %d \n", s1.a, s2.a);
+//		System.out.println("---------------------------------------");
+//		s2.a = 1000;
+//		System.out.printf("s1.a : %d, s2.a : %d \n", s1.a, s2.a);
 		
 		// static 멤버는 참조변수명 대신 클래스명만으로 접근 가능
 		StaticMember.a = 500;

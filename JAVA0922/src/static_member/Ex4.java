@@ -68,7 +68,7 @@ public class Ex4 {
 			System.out.println("sc 와 sc2 는 다른 인스턴스!");
 		}
 		
-		
+				
 	}
 
 }

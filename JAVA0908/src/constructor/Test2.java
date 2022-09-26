@@ -6,9 +6,7 @@ public class Test2 {
 		
 		Account2 acc = new Account2("111-1111-111","홍길동", 10000);
 		acc.showAccountInfo();
-		
 	}
-
 }
 
 class Account2 {

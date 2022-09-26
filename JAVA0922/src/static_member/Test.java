@@ -1,6 +1,6 @@
 package static_member;
 
-public class Test4 {
+public class Test {
 
 	public static void main(String[] args) {
 //		Account acc = new Account();
@@ -9,6 +9,7 @@ public class Test4 {
 		
 		// Setter 호출하여 계좌번호 저장, showAccountInfo() 메서드로 출력
 		acc.setAccounNo("111-1111-111");
+		// System.out.println(Account.getInstance());
 		acc.showAccountInfo();
 	}
 
