@@ -27,6 +27,12 @@ public class Ex2 {
 		 * - 주의! 생성자 super()는 반드시 생성자의 첫 문장에서 실행되어야 함
 		 * 	 => 따라서, 생성자 내에는 super()와 this() 동시 사용 불가
 		 */
+		
+		//Person s1 = new Person(); // 오류발생! 기본생성자가 없기 때문에 
+		
+		Student s  = new Student();
+		
+		Student s2 = new Student("이순신", 44 , true);
 	}
 
 }
@@ -56,8 +62,25 @@ class Student extends Person{ //Implicit super constructor Person() is undefined
 		// => 그러므로,Person() 생성자 없이 파라미터 생성자만 있을 경우 오류!
 		// 따라서, 슈퍼클래스에 기본 생성자를 별도로 정의하거나(1)
 		// 서브클래스에서 슈퍼클래스의 파라미터 생성자를 명시적으로 호출(2)
-		super("홍길동", 20); // 생성자는 반드시 첫 줄에 작성할 것
+//		super("홍길동", 20); 
+//		isStudyMode = true;
+		
+		this("홍길동", 20 , true); // 
+		// 생성자 super()는 생성자 this()와 마찬가지로
+		// 생성자 내에서 가장 먼저 실행되어야 한다!
+		//super("홍길동", 20); // 컴파일에러 발생!
+		
 	}
-	
-	
+	public Student(String name, int age, boolean isStudyMode) {
+		// Student 클래스 생성자에서 모든 멤버변수를 직접 초기화 할 경우
+		//super();
+//		this.name = name;
+//		this.age = age;
+		
+		// name과 age 멤버변수를 초기화하는 코드는 슈퍼클래스인 Person 클래스의 생성자의 초기화 코드와 중복됨
+		// 따라서, 슈퍼클래스로 부터 상속받은 멤버변수 초기화는 슈퍼클래스의 생성자에서 수행하고, 서브클래스의 멤버만 초기화를 직접 수행
+		// => 이 때. 슈퍼클래스의 파라미터 생성자를 호출하여 대신 초기화를 수행
+		super(name, age); // 슈퍼클래스 생성자에 name, age 전달하여 대신 초기화
+		this.isStudyMode = isStudyMode; // 자신의 멤버변수를 초기화
+	}
 }
