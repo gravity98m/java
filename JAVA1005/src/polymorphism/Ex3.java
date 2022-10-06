@@ -85,7 +85,8 @@ class Employee { // class Employee extends Object
 		// => Employee, Manager, Engineer 모두 Employee 타입으로 볼 수 있기 때문에
 		// 		(상속으로 인한 is-a 관계이므로!
 		// => 모두 true가 되어 아래의 else if 조건으로 내려가지 않고 if블록이 실행됨.
-		//		()
+		//    (if ~ else if 문의 특징은 true 조건이 나오면 
+		//     아래의 다른 조건식은 실행되지 않음)
 		
 		if(emp instanceof Manager) { // Manager 타입인가?
 			// Employee -> Manager 타입으로 다운캐스팅 가능
