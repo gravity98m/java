@@ -1,5 +1,7 @@
 package string;
 
+import java.util.Arrays;
+
 public class Ex {
 
 	public static void main(String[] args) {
@@ -27,7 +29,7 @@ public class Ex {
 		 */
 
 		String s1 = "Java Programming";
-		String s2 = "		아이티윌 		부산 교육센터";
+		String s2 = "		아이티윌 		부산 교육센터		";
 		String s3 = "자바/JSP/안드로이드";
 		
 		System.out.println(s1); // toString() 메서드 생략됨
@@ -91,6 +93,78 @@ public class Ex {
 		System.out.println("s1.toUpperCase() : " + s1.toUpperCase());
 		System.out.println("s1.toLowerCase() : " + s1.toLowerCase());
 		
+		// trim() : 문자열 앞 뒤의 불필요한 공백제거
+		// => 주의! 문자열 사이의 공백은 제거하지 않음
+		System.out.println("교육기관은 " +s2 + "입니다.");
+		System.out.println("교육기관은 " +s2.trim() + "입니다.");
+		
+		// contains() : 문자열 포함 여부 리턴
+		System.out.println("s2.contains(부산) : " + s2.contains("부산"));
+		System.out.println("s2.contains(강남) : " + s2.contains("강남"));
+		// f4 : 상속관계, f3 : 내장객체 클래스
+		
+		System.out.println("-----------------------------------------------------------");
+		
+		// split() : 특정 기준으로 문자열 분리
+		// => 분리된 문자열은 배열로 관리됨
+		// => 분리에 사용되는 기준 문자열을 구분자(= 분리자, Delimeter) 라고 함
+		// => 구분자를 지정하는 규칙은 정규표현식을 따름(나중에 배움)
+//		String s3 = "자바/JSP/안드로이드";
+		// => 문자열을 "/" 기호를 기준으로 분리하여 배열로 관리 가능
+
+		String[] subjectArr = s3.split("/");
+		// => 문자열 "/"기호 기준으로 분리하여 String[] 배열 타입으로 리턴
+		// => "자바", "JSP", "안드로이드" 형태로 분리되어 배열에 저장된
+		for(int i = 0; i < subjectArr.length; i++) {
+			System.out.println(subjectArr[i]);
+		}
+		
+		// 만약, "." 기호를 구분자로 지정하는 경우
+		// 정규표현식에서 특수기호로 사용되어 모든 문자를 구분자로 지정하게 됨
+		// => 모든 문자가 분리 기준이 되어 제거됨
+		String s4 = "안녕하세요.자바 프로그래밍입니다.";
+//		String[] strArr = s4.split("."); // 모든 문자열이 제거되므로 사용 불가
+	
+//		for(int i = 0; i < strArr.length; i++) {
+//			System.out.println(strArr[i]);
+//		}
+		
+		// 정규표현식 규칙에 따라 . 기호를 구분자를 지정해야할 경우 \\. 사용
+		String[] strArr = s4.split("\\.");
+		
+		for(int i = 0; i < strArr.length; i++) {
+			System.out.println(strArr[i]);
+		}
+		
+		System.out.println("================================================");
+		
+		// String.format() 메서드
+		// 특정 문자열을 형식 지정문자(%?)와 결합하여 형식을 갖춘 문자열로 리턴
+		// => printf() 메서드와 형식 지정문자 동일
+		String name = "홍길동";
+		int age = 20;
+		double height = 180.7;
+		// => 위의 세 가지 데이터를 형식 지정문자를 사용하여 출력
+		System.out.printf
+		("이름 : %s, 나이 : %d, 키 : %.1f\n", name, age, height);
+		
+		
+		// 위의 세 가지 데이터를 결합한 문자열을 리턴받아 저장
+		String formatStr = String.format("이름 : %s, 나이 : %d, 키 : %.1f\n", name, age, height);
+		
+		System.out.println("생성된 회원 정보는 " + formatStr);
+		
+		System.out.println("==================================================");
+		
+		// toCharArray() : 문자열을 char[] 배열로 리턴
+		String s5 = "admin123!";
+		char[] chArr = s5.toCharArray(); // a, d, m, i, n, 1, 2, 3, ! 로 분리됨
+		for(int i = 0; i < chArr.length; i++) {
+			System.out.println(chArr[i]);
+		}
+		
+		// Arrays.toString() : 배열 내의 모든 데이터를 문자열로 결합하여 리턴
+		System.out.println(Arrays.toString(chArr)); // [a, d, m, i, n, 1, 2, 3, !]
 		
 	}
 
