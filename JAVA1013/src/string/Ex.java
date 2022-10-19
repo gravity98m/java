@@ -29,7 +29,7 @@ public class Ex {
 		 */
 
 		String s1 = "Java Programming";
-		String s2 = "		아이티윌 		부산 교육센터		";
+		String s2 = "		ABC 		부산 교육센터		";
 		String s3 = "자바/JSP/안드로이드";
 		
 		System.out.println(s1); // toString() 메서드 생략됨
