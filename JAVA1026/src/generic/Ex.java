@@ -49,7 +49,7 @@ public class Ex {
 		
 		// 제네릭을 사용한 클래스의 인스턴스 생성
 		// => 클래스명 뒤에 제네릭 타입을 참조 데이터타입으로 명시함
-		//    (int 대신 Integer, char 대신 Character 사용)\
+		//    (int 대신 Integer, char 대신 Character 사용)
 		GenericClass<Integer> gc = new GenericClass<Integer>();
 		// => GenericClass 내의 타입 T가 모두 Integer 타입으로 대체됨
 		gc.setMember(1); // 정수형 데이터 전달 가능
@@ -89,6 +89,7 @@ public class Ex {
 		gc5.setMember(1);
 		gc5.setMember("홍길동");
 		gc5.setMember(new Person("이순신", 54));
+		
 		
 		
 		//=====================================================================
